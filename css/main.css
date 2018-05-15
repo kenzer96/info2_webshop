@@ -1,0 +1,90 @@
+nav {
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 5px #000000;
+    vertical-align: center;
+}
+
+.login {
+    padding-top: 2%;
+    width: 30%;
+    margin: auto;
+    position: center;
+}
+
+.home-introduction {
+    padding-top: 3%;
+    width: 70%;
+    margin: auto;
+}
+
+.reg-div {
+    margin: auto;
+    padding-top: 1%;
+    width: 30%;
+}
+
+.reg {
+    width: 100%;
+}
+
+.reg-form{
+    padding-top: 4%;
+    width: 30%;
+    margin: auto;
+    position: center;
+}
+
+.reg-form input {
+    margin-top: 0;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+.user a {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#buy {
+    margin-top: 50%;
+    margin-bottom: 0%;
+    font-weight: 800;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+}
+
+.product-image{
+    width:80%;
+}
+
+table.table {
+    width: 50%;
+    margin: auto;
+}
+
+li.list-group-item {
+    border: none;
+    padding: 0;
+}
+
+li.product-name {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.purchase-table {
+    margin: auto;
+}
+
+.purchase-date {
+    width: 10%;
+    margin: auto;
+}

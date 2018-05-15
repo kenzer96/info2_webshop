@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="list list-inline">
+            <li class="list-inline-item"><h4><a href="/">Főoldal</a></h4></li>
+            <li class="list-inline-item"><h4><a href="phones.php">Telefonok</a></h4></li>
+            <li class="list-inline-item">
+                <?php if (isLoggedIn()) { ?>
+                <h4><a href="purchases.php">Vásárlásaim</a></h4>
+                <?php } ?>
+            </li>
+        </ul>
+
+        <?php if (!isLoggedIn()) { ?>
+        <form class="form form-inline" action="login.php" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="email" placeholder="Email cím" id="email">
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Jelszó" id="password">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" name="submit" value="Bejelentkezés">Bejelentkezés <i
+                        class="fa fa-sign-in"></i></button>
+            </div>
+        </form>
+
+        <?php }else{ ?>
+        <ul class="list list-inline right">
+            <li class="list-inline-item user">
+                <a class="btn btn-primary" href="logout.php">Kijelentkezés <i class="fa fa-sign-out"></i></a>
+            </li>
+        <?php } ?>
+    </div>
+</nav>
