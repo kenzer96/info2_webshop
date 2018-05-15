@@ -19,7 +19,7 @@ A fentieken kívül néhány további segédfájlt is fogunk használni:
 
 ## Közös menü és index.php
 Kezdjük az index.php fájl implementációjával: 
-```html
+```php
 <?php
 require_once('includes/init.php');
 
@@ -99,7 +99,7 @@ Az adatbáziskezelés megkönnyítésére néhány segédfüggvényt definiálun
 
 A phone tábla tartalmát a `phones.php` oldalon jelenítjük meg. Ez tartalmazza a következő kódot!
 
-```html
+```php
 <?php require_once("includes/init.php"); ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -160,7 +160,7 @@ A phone tábla tartalmát a `phones.php` oldalon jelenítjük meg. Ez tartalmazz
 </html>
 ```
 A telefonok kilistázása egy egyszerű táblázat, amit a `main.css` és Bootstrap segítségével formázunk meg. A táblázat a phone adatbázistábla alapján írja ki, hogy az adott telefon készleten van-e. Ezt a következő kódrészlet vizsgálja:
-```html
+```php
 <?php if ($row['in_stock'] > 0) {
     echo "Készleten";
 } else {
@@ -169,7 +169,7 @@ A telefonok kilistázása egy egyszerű táblázat, amit a `main.css` és Bootst
 ?>
 ```
 Az oldal felhasználja a `purchase.php` fájlt, ami az adatbázissal kommunikál. Ezt a fájlt a Megrendelem gomb megnyomásával tudjuk elérni. A `purchase.php` fájl kódja:
-```html
+```php
 <?php
 require_once('includes/init.php');
 if(!isLoggedIn()){
@@ -193,7 +193,7 @@ A bejelentkezett felhasználó és a kiválasztott telefon Id-ja alapján létre
 ## Vásárlásaim
 A felhasználó ezen az oldalon tekintheti meg az általa megrendelt termékeket, valamint törölheti a megrendeléseit. 
 Az oldal kódja:
-```html
+```php
 <?php
 require_once('includes/init.php');
 
@@ -252,7 +252,7 @@ if(!isLoggedIn()){
 </html>
 ```
 Itt először ellenőrizzük, hogy ki mi a belépett felhasználó Id-ja, majd ez alapján listázzuk ki a vásárlásait. A kilistázott tételek mindegyikéhez tartozik egy Törlés gomb, amely a `remove_purchase.php` fájra mutat. A `remove_purchase.php` fájl kódja:
-```html
+```php
 <?php
 require_once('includes/init.php');
 
